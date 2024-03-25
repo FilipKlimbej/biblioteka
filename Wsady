@@ -1,0 +1,103 @@
+-- Wsady dla Autorów
+INSERT INTO bibliotekapwplo.autor (IdAutor, Imie, Nazwisko, Pseudonim)
+VALUES 
+(1, 'John', 'Doe', 'JD'),
+(2, 'Emily', 'Smith', 'ES'),
+(3, 'Michael', 'Johnson', 'MJ'),
+(4, 'Sophie', 'Brown', NULL),
+(5, 'David', 'Wilson', 'DW');
+(6, 'Emma', 'Johnson', 'EJ'),
+(7, 'Daniel', 'Martinez', 'DM'),
+(8, 'Olivia', 'Clark', NULL),
+(9, 'Benjamin', 'Garcia', 'BG'),
+(10, 'Sophie', 'Davis', 'SD');
+
+
+
+-- Wsady dla Gatunków
+INSERT INTO bibliotekapwplo.gatunek (IdGatunek, PokazUkryj)
+VALUES 
+(1, TRUE),
+(2, TRUE),
+(3, TRUE),
+(4, TRUE),
+(5, TRUE);
+
+-- Wsady dla Wydawnictw
+INSERT INTO bibliotekapwplo.wydawnictwo (IdWydawnictwo, Nazwa, Status)
+VALUES 
+(1, 'Wydawnictwo XYZ', 'Aktywne'),
+(2, 'Wydawnictwo ABC', 'Aktywne'),
+(3, 'Wydawnictwo 123', 'Aktywne'),
+(4, 'Wydawnictwo QRS', 'Nieaktywne'),
+(5, 'Wydawnictwo UVW', 'Aktywne');
+
+-- Wsady dla Lokalizacji
+INSERT INTO bibliotekapwplo.lokalizacja (IdLokalizacja, Miasto, KodPocztowy, Województwo)
+VALUES 
+(1, 'Warszawa', '00-001', 'Mazowieckie'),
+(2, 'Kraków', '30-002', 'Małopolskie'),
+(3, 'Łódź', '90-003', 'Łódzkie'),
+(4, 'Wrocław', '50-004', 'Dolnośląskie'),
+(5, 'Poznań', '60-005', 'Wielkopolskie');
+
+-- Wsady dla Bibliotek
+INSERT INTO bibliotekapwplo.biblioteka (IdBiblioteka, IdLokalizacja, IdGodzinyOtwarcia, Nazwa, Field)
+VALUES 
+(1, 1, 1, 'Biblioteka Centralna', 'Field1'),
+(2, 2, 2, 'Filialka Krakowska', 'Field2'),
+(3, 3, 3, 'Filialka Łódzka', 'Field3'),
+(4, 4, 4, 'Filialka Wrocławska', 'Field4'),
+(5, 5, 5, 'Filialka Poznańska', 'Field5');
+
+-- Wsady dla Książek
+INSERT INTO bibliotekapwplo.ksiazka (IdBook, IdAutor, Gatunek, Opis, Recenzja, RokWydania, Wydawnictwo, Status)
+VALUES 
+(1, 1, 'Fantastyka', 'Opis książki 1', 'Recenzja książki 1', '2020-01-01', 'Wydawnictwo XYZ', 1),
+(2, 2, 'Dramat', 'Opis książki 2', 'Recenzja książki 2', '2018-01-01', 'Wydawnictwo ABC', 0),
+(3, 3, 'Kryminał', 'Opis książki 3', 'Recenzja książki 3', '2015-01-01', 'Wydawnictwo 123', 1),
+(4, 4, 'Romans', 'Opis książki 4', 'Recenzja książki 4', '2012-01-01', 'Wydawnictwo QRS', 0),
+(5, 5, 'Sci-Fi', 'Opis książki 5', 'Recenzja książki 5', '2010-01-01', 'Wydawnictwo UVW', 1); 
+(6, 6, 'Fantastyka', 'Opis książki 6', 'Recenzja książki 6', '2011-01-01', 'Wydawnictwo XYZ', 1),
+(7, 7, 'Dramat', 'Opis książki 7', 'Recenzja książki 7', '2013-01-01', 'Wydawnictwo ABC', 0),
+(8, 8, 'Kryminał', 'Opis książki 8', 'Recenzja książki 8', '2016-01-01', 'Wydawnictwo 123', 1),
+(9, 9, 'Romans', 'Opis książki 9', 'Recenzja książki 9', '2018-01-01', 'Wydawnictwo QRS', 0),
+(10, 10, 'Sci-Fi', 'Opis książki 10', 'Recenzja książki 10', '2020-01-01', 'Wydawnictwo UVW', 1),
+(11, 1, 'Fantastyka', 'Opis książki 11', 'Recenzja książki 11', '2012-01-01', 'Wydawnictwo XYZ', 1),
+(12, 2, 'Dramat', 'Opis książki 12', 'Recenzja książki 12', '2014-01-01', 'Wydawnictwo ABC', 0),
+(13, 3, 'Kryminał', 'Opis książki 13', 'Recenzja książki 13', '2017-01-01', 'Wydawnictwo 123', 1),
+(14, 4, 'Romans', 'Opis książki 14', 'Recenzja książki 14', '2019-01-01', 'Wydawnictwo QRS', 0),
+(15, 5, 'Sci-Fi', 'Opis książki 15', 'Recenzja książki 15', '2010-01-01', 'Wydawnictwo UVW', 1),
+(16, 6, 'Fantastyka', 'Opis książki 16', 'Recenzja książki 16', '2013-01-01', 'Wydawnictwo XYZ', 1),
+(17, 7, 'Dramat', 'Opis książki 17', 'Recenzja książki 17', '2016-01-01', 'Wydawnictwo ABC', 0),
+(18, 8, 'Kryminał', 'Opis książki 18', 'Recenzja książki 18', '2019-01-01', 'Wydawnictwo 123', 1),
+(19, 9, 'Romans', 'Opis książki 19', 'Recenzja książki 19', '2012-01-01', 'Wydawnictwo QRS', 0),
+(20, 10, 'Sci-Fi', 'Opis książki 20', 'Recenzja książki 20', '2015-01-01', 'Wydawnictwo UVW', 1),
+(21, 1, 'Fantastyka', 'Opis książki 21', 'Recenzja książki 21', '2018-01-01', 'Wydawnictwo XYZ', 1),
+(22, 2, 'Dramat', 'Opis książki 22', 'Recenzja książki 22', '2011-01-01', 'Wydawnictwo ABC', 0),
+(23, 3, 'Kryminał', 'Opis książki 23', 'Recenzja książki 23', '2014-01-01', 'Wydawnictwo 123', 1),
+(24, 4, 'Romans', 'Opis książki 24', 'Recenzja książki
+(25, 5, 'Sci-Fi', 'Opis książki 25', 'Recenzja książki 25', '2017-01-01', 'Wydawnictwo UVW', 1),
+(26, 6, 'Fantastyka', 'Opis książki 26', 'Recenzja książki 26', '2010-01-01', 'Wydawnictwo XYZ', 1),
+(27, 7, 'Dramat', 'Opis książki 27', 'Recenzja książki 27', '2013-01-01', 'Wydawnictwo ABC', 0),
+(28, 8, 'Kryminał', 'Opis książki 28', 'Recenzja książki 28', '2016-01-01', 'Wydawnictwo 123', 1),
+(29, 9, 'Romans', 'Opis książki 29', 'Recenzja książki 29', '2019-01-01', 'Wydawnictwo QRS', 0),
+(30, 10, 'Sci-Fi', 'Opis książki 30', 'Recenzja książki 30', '2012-01-01', 'Wydawnictwo UVW', 1);
+
+-- Wsady dla Egzemplarzy
+INSERT INTO bibliotekapwplo.egzemplarz (IdEgzemplarz, IdBook, Status, IdBiblioteka, Zużycie)
+VALUES 
+(1, 1, 'Dostępna', 1, '0%'),
+(2, 2, 'Wypożyczona', 2, '30%'),
+(3, 3, 'Dostępna', 3, '20%'),
+(4, 4, 'Dostępna', 4, '10%'),
+(5, 5, 'Wypożyczona', 5, '50%');
+
+-- Wsady dla Zamówień
+INSERT INTO bibliotekapwplo.zamowienie (IdZamowienie, IdEgzemplarz, IdUzytkownik, Data, CzasOdbioru)
+VALUES 
+(1, 1, 1, '2024-01-01', '10:00'),
+(2, 2, 2, '2024-01-02', '11:00'),
+(3, 3, 3, '2024-01-03', '12:00'),
+(4, 4, 4, '2024-01-04', '13:00'),
+(5, 5, 5, '2024-01-05', '14:00');
