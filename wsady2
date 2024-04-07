@@ -1,0 +1,74 @@
+-- Wstawianie danych do tabeli Ksiazki
+INSERT INTO Ksiazki (ID, Tytul, Wypozyczenia, Zamowienia, Uzytkownicy, DostepneEgzemplarze) 
+VALUES
+    (1, 'Zbrodnia i kara', 15, 5, 30, 10),
+    (2, 'Władca Pierścieni: Drużyna Pierścienia', 25, 10, 45, 5),
+    (3, 'Harry Potter i Kamień Filozoficzny', 20, 8, 40, 7),
+    (4, 'Duma i uprzedzenie', 18, 6, 35, 8),
+    (5, 'Mistrz i Małgorzata', 12, 4, 25, 9),
+    (6, '1984', 22, 7, 38, 6),
+    (7, 'To', 28, 9, 50, 4),
+    (8, 'Lśnienie', 16, 5, 32, 11),
+    (9, 'Wojna i pokój', 14, 3, 28, 12),
+    (10, 'Mały Książę', 10, 2, 20, 14);
+
+
+-- Wstawianie danych do tabeli Wypozyczenia
+INSERT INTO Wypozyczenia (ID_Ksiazki, ID_Uzytkownika, DataWypozyczenia, DataZwrotu)
+VALUES
+    (1, 101, '2024-03-01', '2024-03-10'),
+    (2, 102, '2024-03-02', '2024-03-12'),
+    (3, 103, '2024-03-05', '2024-03-15'),
+    (4, 104, '2024-03-08', '2024-03-18'),
+    (5, 105, '2024-03-10', '2024-03-20'),
+    (6, 106, '2024-03-12', '2024-03-22'),
+    (7, 107, '2024-03-15', '2024-03-25'),
+    (8, 108, '2024-03-18', '2024-03-28'),
+    (9, 109, '2024-03-20', '2024-03-30'),
+    (10, 110, '2024-03-22', '2024-04-01');
+
+ FOREIGN KEY (ID_Uzytkownika) REFERENCES Uzytkownicy(ID)
+
+
+-- Wstawianie danych do tabeli Zamowienia
+INSERT INTO Zamowienia (ID_Ksiazki, ID_Uzytkownika, DataZamowienia, Status)
+VALUES
+    (1, 201, '2024-03-01', 'W trakcie realizacji'),
+    (2, 202, '2024-03-02', 'W trakcie realizacji'),
+    (3, 203, '2024-03-03', 'W trakcie realizacji'),
+    (4, 204, '2024-03-04', 'Zrealizowane'),
+    (5, 205, '2024-03-05', 'Zrealizowane'),
+    (6, 206, '2024-03-06', 'W trakcie realizacji'),
+    (7, 207, '2024-03-07', 'Zrealizowane'),
+    (8, 208, '2024-03-08', 'Zrealizowane'),
+    (9, 209, '2024-03-09', 'W trakcie realizacji'),
+    (10, 210, '2024-03-10', 'W trakcie realizacji');
+
+
+-- Wstawianie danych do tabeli Uzytkownicy
+INSERT INTO Uzytkownicy (ID, Imie, Nazwisko, Email, NumerTelefonu)
+VALUES
+    (101, 'Adam', 'Nowak', 'adam.nowak@example.com', '123-456-789'),
+    (102, 'Ewa', 'Kowalska', 'ewa.kowalska@example.com', '987-654-321'),
+    (103, 'Jan', 'Wiśniewski', 'jan.wisniewski@example.com', '111-222-333'),
+    (104, 'Anna', 'Kaczmarek', 'anna.kaczmarek@example.com', '444-555-666'),
+    (105, 'Piotr', 'Lewandowski', 'piotr.lewandowski@example.com', '777-888-999'),
+    (106, 'Katarzyna', 'Wójcik', 'katarzyna.wojcik@example.com', '000-999-888'),
+    (107, 'Tomasz', 'Kamiński', 'tomasz.kaminski@example.com', '111-333-555'),
+    (108, 'Magdalena', 'Kowalczyk', 'magdalena.kowalczyk@example.com', '666-444-222'),
+    (109, 'Paweł', 'Zieliński', 'pawel.zielinski@example.com', '999-777-555'),
+
+
+-- Wstawianie danych do tabeli Egzemplarze
+INSERT INTO Egzemplarze (ID_Ksiazki, Stan)
+VALUES
+    (1, 'Dostępna'),
+    (2, 'Wypożyczona'),
+    (3, 'Dostępna'),
+    (4, 'Dostępna'),
+    (5, 'Wypożyczona'),
+    (6, 'Dostępna'),
+    (7, 'Dostępna'),
+    (8, 'Wypożyczona'),
+    (9, 'Dostępna'),
+    (10, 'Dostępna');
